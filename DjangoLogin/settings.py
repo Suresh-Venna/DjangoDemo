@@ -54,7 +54,7 @@ ROOT_URLCONF = 'DjangoLogin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:\\Users\\vvenn\\Desktop\\Django_demo\\.vscode\\templates"],
+        'DIRS': [".vscode/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
