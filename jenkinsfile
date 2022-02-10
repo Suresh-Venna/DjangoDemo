@@ -4,11 +4,32 @@ pipeline{
         stage('build'){
             // agent{
             //     docker {
-            //         image 'python:2-alpine'
+            //         image 'spython:2-alpine'
             //     }
             // }
             steps{
-                sh 'python manage.py runserver'
+                // sh 'python manage.py runserver'
+                echo 'build done'
+            }
+        }
+        stage('test'){
+            // agent{
+            //     docker {
+            //         image 'spython:2-alpine'
+            //     }
+            // }
+            steps{
+                echo "test done"
+            }
+        }
+        stage('deploy'){
+            // agent{
+            //     docker {
+            //         image 'spython:2-alpine'
+            //     }
+            // }
+            steps{
+                echo "deploy  done"
             }
         }
     }
