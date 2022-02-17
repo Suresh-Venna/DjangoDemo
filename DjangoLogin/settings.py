@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-&ft+di0#eolce@_@ljwldi7+0__mqpv$c_2ez+ib!p%-^cgy99'
 try:
-    SECRET_KEY = OS.environ["SECRET_KEY"]
+    SECRET_KEY = os.environ["SECRET_KEY"]
 except KeyError as e:
     raise RuntimeError("Couldnt find a secret key in environment") from e
 
